@@ -19,7 +19,7 @@ export const SkeletonContainer = styled.div`
     height: fit-content;
     display: flex;
     flex-direction: column;
-    margin: 2%;
+    margin: 0.25% 2% 2% 2%;
     gap: 10px;
     padding: 0.75%;
     background-color: white;

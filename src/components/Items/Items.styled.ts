@@ -44,6 +44,7 @@ export const Title = styled.div`
 
 export const ItemButtonContainer = styled.div` 
     padding: 1.75% 0 0.25% 2%; 
+    box-sizing: border-box;
     gap: 10px;
     justify-content: flex-start;
     align-items: center;
