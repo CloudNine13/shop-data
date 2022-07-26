@@ -39,6 +39,7 @@ export const Header = styled(text)`
 export const Button = styled(text)`
     width: 15%;
     height: 12%;
+    margin-bottom: 30px;
     background: transparent;
     min-width: fit-content; 
     border: 2px solid white;

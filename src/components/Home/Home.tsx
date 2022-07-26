@@ -2,19 +2,22 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import { HomeContainer, GroupContainer, Header, Button } from './Home.styled'
 
-export default () => {
+const Home: React.FC = () => {
     const nav = useNavigate()
 
-    function navigateToShop() {
-        nav("/items")
+    function navigateTo(path: string) {
+        nav(path)
     }
         
     return (
         <HomeContainer>
             <GroupContainer>
                 <Header> Scrapper Shop</Header>
-                <Button onClick={() => navigateToShop()}> Enter the shop </Button>
+                <Button onClick={() => navigateTo('/items')}> Enter the shop </Button>
+                <Button onClick={() => navigateTo('/table')}> See shop table </Button>
             </GroupContainer>
         </HomeContainer>
     )
 }
+
+export default Home

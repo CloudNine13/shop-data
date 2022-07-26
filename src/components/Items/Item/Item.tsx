@@ -1,7 +1,17 @@
 import { ItemContainer, Image, Description, Price, Name } from './Item.styled'
 
-export default (props : { data: { Name: string, Price: string, Description: string, Image: string } } ) => {
+interface Props {
+    key: number, 
+    data: {
+        Name: string, 
+        Price: string, 
+        Description: string, 
+        Image: string 
+    }
+}
 
+
+const Item: React.FC<Props> = (props) => {
     const item = props.data
     
     return(
@@ -13,3 +23,5 @@ export default (props : { data: { Name: string, Price: string, Description: stri
         </ItemContainer>
     )
 }
+
+export default Item
