@@ -4,7 +4,7 @@ interface Props {
     key: number, 
     data: {
         Name: string, 
-        Price: string, 
+        Price: number, 
         Description: string, 
         Image: string 
     }
@@ -17,7 +17,7 @@ const Item: React.FC<Props> = (props) => {
     return(
         <ItemContainer>
             <Image src={item.Image} />
-            <Price>{item.Price}</Price>  
+            <Price>${item.Price}</Price>  
             <Name>{item.Name}</Name>
             <Description> {item.Description}</Description>
         </ItemContainer>

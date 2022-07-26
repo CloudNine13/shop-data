@@ -1,32 +1,31 @@
-import { ItemsContainer, Wrapper, Title, Button, ItemButtonContainer } from './Items.styled'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { ItemsContainer, Wrapper, Title, Button, TextButtonContainer } from './Items.styled'
 import Skeleton from '../../utils/Skeleton/Skeleton'
 import Item from './Item/Item'
-import GetAPI from '../../API/Get'
-import { useState } from 'react'
+import getAPI from '../../API/Get'
 import mockData from '../../utils/mock.json'
-import { useNavigate } from 'react-router-dom'
+import navigateBack from '../../utils/navigate'
 
 export default () => {
     const [data, setData] = useState(mockData)
     const [loading, setLoading] = useState(true)
-    const navigate = useNavigate()
+    const nav = useNavigate()
     document.title = "Shop items"
-
-    GetAPI().then(res => {
-        setData(res)
-        setLoading(false)
-    })
-
-    const navigateBack = () => {
-        navigate(-1)
-    }
+    
+    useEffect(() => {
+        getAPI().then(res => {
+            setData(res)
+            setLoading(false)
+        })
+    }, [])
         
     return (
         <Wrapper>
-            <ItemButtonContainer>
-                <Button onClick={() => navigateBack()}/>
+            <TextButtonContainer>
+                <Button onClick={() => navigateBack(nav)}/>
                 <Title>SHOP ITEMS</Title>
-            </ItemButtonContainer>
+            </TextButtonContainer>
             <ItemsContainer>
                 { loading
                     ? mockData.map((_, i) => {

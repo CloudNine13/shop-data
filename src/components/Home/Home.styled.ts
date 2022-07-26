@@ -54,6 +54,6 @@ export const Button = styled(text)`
     user-select: none;
 
     &:active {
-        margin-top: 2px;
+        transform: translateY(2px);
     }
 `

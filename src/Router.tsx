@@ -1,5 +1,6 @@
 import Home from './components/Home/Home'
 import Items from './components/Items/Items'
+import Table from './components/Table/Table';
 import Error404 from './components/404/404'
 import {
   BrowserRouter,
@@ -13,6 +14,7 @@ function Router() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/items" element={<Items />}/>
+          <Route path='/table' element={<Table />}/>
           <Route path='*' element={<Error404 />} />
         </Routes>
       </BrowserRouter>

@@ -27,7 +27,8 @@ export const ItemsContainer = styled(div)`
 `
 
 export const Wrapper = styled(div)`
-    font-family: 'Rubik';    
+    font-family: 'Rubik'; 
+    overflow: auto;   
     width: 100%;
     height: 100%;
     display: flex;
@@ -42,7 +43,7 @@ export const Title = styled.div`
     text-shadow: -1.2px 0 black, 0 1.2px black, 1.2px 0 black, 0 -1.2px black;
 `
 
-export const ItemButtonContainer = styled.div` 
+export const TextButtonContainer = styled.div` 
     padding: 1.75% 0 0.25% 2%; 
     box-sizing: border-box;
     gap: 10px;
