@@ -4,7 +4,7 @@ import { ItemsContainer, Wrapper, Title, Button, TextButtonContainer } from './I
 import Skeleton from '../../utils/Skeleton/Skeleton'
 import Item from './Item/Item'
 import getAPI from '../../API/Get'
-import mockData from '../../utils/mock.json'
+import mockData from '../../utils/mockData.json'
 import navigateBack from '../../utils/navigate'
 
 export default () => {

@@ -6,16 +6,18 @@ import {
   BrowserRouter,
   Routes,
   Route
-} from "react-router-dom";
+} from 'react-router-dom';
+import Detail from './components/Items/Item/Detail/Detail';
 
 function Router() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/items" element={<Items />}/>
+          <Route path='/' element={<Home />}/>
+          <Route path='/items' element={<Items />}/>
           <Route path='/table' element={<Table />}/>
-          <Route path='*' element={<Error404 />} />
+          <Route path='/detail' element={<Detail />}/>
+          <Route path='*' element={<Error404 />}/>
         </Routes>
       </BrowserRouter>
   );

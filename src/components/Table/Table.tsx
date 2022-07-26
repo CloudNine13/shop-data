@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import navigateBack from '../../utils/navigate'
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
-import mockData from '../../utils/mock.json'
+import mockData from '../../utils/mockData.json'
 import getAPI from '../../API/Get'
 import { GridContainer, TextButtonContainer, Title, Wrapper, Button } from './Table.styled'
 
 const Table: React.FC = () => {
     const [data, setData] = useState(mockData)
     const nav = useNavigate()
+    document.title = "Shop item table"
 
     const columnDefs = useMemo(() => [
         { field: 'Name' },

@@ -1,4 +1,6 @@
 import { ItemContainer, Image, Description, Price, Name } from './Item.styled'
+import navigate from '../../../utils/navigate'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {
     key: number, 
@@ -10,12 +12,12 @@ interface Props {
     }
 }
 
-
 const Item: React.FC<Props> = (props) => {
+    const nav = useNavigate()
     const item = props.data
     
     return(
-        <ItemContainer>
+        <ItemContainer onClick={() => navigate(nav, '/detail', { state: item })}>
             <Image src={item.Image} />
             <Price>${item.Price}</Price>  
             <Name>{item.Name}</Name>
