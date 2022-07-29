@@ -1,6 +1,8 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
+  "files.autoSave": "afterDelay",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.validate.enable": true,
+  "editor.formatOnSave": true
 }
